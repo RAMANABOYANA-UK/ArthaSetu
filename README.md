@@ -1,100 +1,88 @@
-# Market ChatGPT - Next Generation
-## AI-Powered Multi-Agent Financial Intelligence for Retail Investors
+# 🎯 ArthaSetu - Investment Intelligence Dashboard
 
-Intelligent investment platform combining technical analysis, sentiment analysis, and portfolio risk assessment for Indian retail investors.
+**Real-time stock analysis, market sentiment, and investment recommendations for Indian markets.**
 
-### Features
+![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat-square)
+![Flask](https://img.shields.io/badge/Flask-Latest-green?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=flat-square)
 
-- **💬 Market ChatGPT**: Interactive AI agent answering stock and portfolio questions
-- **🔍 Multi-Factor Analysis**: Technical + Sentiment + Fundamentals synthesis
-- **📊 Portfolio Audit**: Concentration risk analysis and rebalancing suggestions
-- **🎯 Real-Time Alerts**: NSE stock data, news sentiment, technical signals
-- **📈 India-Specific Insights**: FII/DII flows, sector rotation, currency impact
+---
 
-### Quick Start
+## 🚀 Quick Start
 
-#### 1. Install Dependencies
+### 1. Clone & Setup
+```bash
+git clone https://github.com/RAMANABOYANA-UK/ArthaSetu.git
+cd ArthaSetu
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+```
+
+### 2. Install & Run
 ```bash
 pip install -r requirements.txt
+python api_server.py
 ```
 
-#### 2. Set Up Environment Variables
-Create a `.env` file:
+Open: **http://localhost:7000**
+
+---
+
+## ✨ Features
+
+- **13 Stock Recommendations** - BUY/SELL/HOLD signals across 7 sectors
+- **Market Sentiment** - 6 real-time indicators (Breadth, VIX, Momentum, RSI, FII, P/E)
+- **Market Indices** - NIFTY 50, SENSEX, NIFTY BANK, IT INDEX, PHARMA INDEX
+- **Stock Analysis** - Fundamentals, sentiment, technical indicators, risk metrics
+- **Portfolio Tracking** - Add/remove stocks, monitor holdings
+- **Fast & Cached** - 5-second TTL caching + parallel loading
+- **Responsive** - Desktop, tablet, mobile ready
+
+---
+
+## 🔑 Login
+
 ```
-OPENAI_API_KEY=your_key_here
-NEWSAPI_KEY=your_key_here  # Optional for demo
+Email: test@arthsetu.com
+Password: test123
 ```
 
-#### 3. Run the App
-```bash
-streamlit run app.py
+---
+
+## 📊 Top 13 Stocks
+
+TCS • INFY • WIPRO • RELIANCE • ITC • BAJAJFINSV • HDFCBANK • AXISBANK • MARUTI • LT • NESTLEIND • PHARMACIE • GICRE
+
+---
+
+## 🛠 Tech Stack
+
+**Backend**: Flask, Python 3.8+  
+**Frontend**: HTML5, CSS3, JavaScript, Chart.js  
+**Data**: Alpha Vantage, Yahoo Finance, NSE  
+**Database**: SQLite  
+**Deployment**: Docker ready
+
+---
+
+## 📡 API Endpoints
+
+```
+GET  /                            Dashboard
+GET  /api/market/recommendations  13 recommendations
+GET  /api/market/sentiment        6 indicators
+GET  /api/market/performance      5 indices
+GET  /api/analysis/complete/<sym> Stock analysis
 ```
 
-The app will open at `http://localhost:8501`
+---
 
-### Usage Modes
+## 📚 Documentation
 
-1. **Market Chat**: Ask questions like "Should I buy Infosys?" or "Is my portfolio overconcentrated?"
-2. **Stock Analysis**: Deep dive into technical, sentiment, and fundamental analysis
-3. **Portfolio Audit**: Get concentration risk assessment and rebalancing suggestions
-4. **Demo Scenarios**: Try pre-built scenarios (Technical Analysis, Sentiment Analysis, Portfolio Risk)
+- [SETUP_GUIDE.md](SETUP_GUIDE.md) - Full installation guide
+- [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md) - What was built
+- [PLATFORM_READY.md](PLATFORM_READY.md) - Production checklist
 
-### Architecture
+---
 
-**Multi-Agent System** (CrewAI):
-- Market Data Researcher: Fetches real-time prices, fundamentals
-- Technical Analyst: Detects patterns, divergences, support/resistance
-- Sentiment Analyst: Processes news, earnings, institutional flows
-- Portfolio Strategist: Synthesizes recommendations, assesses risk
-
-**Data Sources**:
-- yfinance: Stock prices, OHLCV data
-- NewsAPI: Financial news and articles
-- CoinGecko: Cryptocurrency data
-- Technical Indicators: RSI, MACD, Moving Averages, Bollinger Bands
-
-### Demo Portfolio
-
-Sample portfolio with 6 stocks across IT, Banking, FMCG, Energy sectors. Load via sidebar to test analysis features.
-
-### Key Features Demonstrated
-
-✅ Real-time stock price data  
-✅ Multi-timeframe technical analysis  
-✅ News sentiment scoring (VADER)  
-✅ Portfolio concentration metrics  
-✅ Buy/Sell/Hold recommendations with confidence scores  
-✅ Source attribution and agent reasoning transparency  
-✅ India-specific market context  
-
-### Limitations & Next Steps
-
-**MVP Scope**:
-- Session-based portfolio (no persistence)
-- Limited to yfinance data (NSE mapping)
-- Mock FII flows and sector rotation data
-- Single LLM model (GPT-3.5-turbo)
-
-**Post-Hackathon Enhancements**:
-- Real-time NSE WebSocket integration
-- User authentication + portfolio persistence
-- Advanced MF analysis
-- Scheduled alerts/newsletters
-- Video generation (AI Market Video Engine)
-- Historical backtesting framework
-
-### Testing
-
-Sample stocks available for testing:
-- TCS
-- Infosys
-- Reliance
-- HDFC Bank
-- Wipro
-- ITC
-
-### License
-Open source - MIT
-
-### Support
-For issues or questions, refer to the analysis explanations in-app or review agent reasoning traces.
+**Version**: 2.0 | Open Source | MIT License
