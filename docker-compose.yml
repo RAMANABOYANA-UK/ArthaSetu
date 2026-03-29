@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  arthaSetu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arthaSetu-market-intelligence
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+    volumes:
+      - .:/app
+      - /app/__pycache__
+    stdin_open: true
+    tty: true
+    networks:
+      - arthaSetu-network
+
+networks:
+  arthaSetu-network:
+    driver: bridge
